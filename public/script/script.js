@@ -134,156 +134,156 @@ window.onclick = function(event) {
 
 //  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Begin Tour Destinations Step 2 of 4 Modal &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-// Get the modal
-var modal4 = document.getElementById('myModal4');
+// // Get the modal
+// var modal4 = document.getElementById('myModal4');
 
-// Get the button that opens the modal
-var btn4 = document.getElementById("create-button");
+// // Get the button that opens the modal
+// var btn4 = document.getElementById("create-button");
 
 
-// Get the <span> element that closes the modal
-var span4 = document.getElementsByClassName("close4")[0];
+// // Get the <span> element that closes the modal
+// var span4 = document.getElementsByClassName("close4")[0];
 
-// When the user clicks the button, open the modal 
-btn4.onclick = function() {
-    modal3.style.display = "none";
-    // modal4.style.display = "block";
-}
+// // When the user clicks the button, open the modal 
+// btn4.onclick = function() {
+//     modal3.style.display = "none";
+//     // modal4.style.display = "block";
+// }
 
-// When the user clicks on <span> (x), close the modal
-span4.onclick = function() {
-    modal4.style.display = "none";
-}
+// // When the user clicks on <span> (x), close the modal
+// span4.onclick = function() {
+//     modal4.style.display = "none";
+// }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal4) {
-        modal4.style.display = "none";
-    }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal4) {
+//         modal4.style.display = "none";
+//     }
+// }
 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& End Tour Destinations Step 2 of 4 Modal &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 
 //  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Begin Tour Destinations Step 3 of 4 Modal %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-// Get the modal
-var modal5 = document.getElementById('myModal5');
+// // Get the modal
+// var modal5 = document.getElementById('myModal5');
 
-// Get the button that opens the modal
-var btn5 = document.getElementById("create-tour-three-of-four");
-var btn5a = document.getElementById("one-of-four-back-modal");
+// // Get the button that opens the modal
+// var btn5 = document.getElementById("create-tour-three-of-four");
+// var btn5a = document.getElementById("one-of-four-back-modal");
 
-// Get the <span> element that closes the modal
-var span5 = document.getElementsByClassName("close5")[0];
+// // Get the <span> element that closes the modal
+// var span5 = document.getElementsByClassName("close5")[0];
 
-// When the user clicks the button, open the modal 
-btn5.onclick = function() {
-    modal4.style.display = "none";
-    modal5.style.display = "block";
-}
+// // When the user clicks the button, open the modal 
+// btn5.onclick = function() {
+//     modal4.style.display = "none";
+//     modal5.style.display = "block";
+// }
 
-btn5a.onclick = function() {
-    modal4.style.display = "none";
-    modal3.style.display = "block";
-}
+// btn5a.onclick = function() {
+//     modal4.style.display = "none";
+//     modal3.style.display = "block";
+// }
 
-// When the user clicks on <span> (x), close the modal
-span5.onclick = function() {
-    modal5.style.display = "none";
-}
+// // When the user clicks on <span> (x), close the modal
+// span5.onclick = function() {
+//     modal5.style.display = "none";
+// }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal5) {
-        modal5.style.display = "none";
-    }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal5) {
+//         modal5.style.display = "none";
+//     }
+// }
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End Tour Destinations Step 3 of 4 Modal %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Begin Tour Destinations Step 4 of 4 Modal @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-// Get the modal
-var modal6 = document.getElementById('myModal6');
+// // Get the modal
+// var modal6 = document.getElementById('myModal6');
 
-// Get the button that opens the modal
-var btn6 = document.getElementById("create-tour-four-of-four");
-var btn6a = document.getElementById("two-of-four-back-modal");
+// // Get the button that opens the modal
+// var btn6 = document.getElementById("create-tour-four-of-four");
+// var btn6a = document.getElementById("two-of-four-back-modal");
 
 
-// Get the <span> element that closes the modal
-var span6 = document.getElementsByClassName("close6")[0];
+// // Get the <span> element that closes the modal
+// var span6 = document.getElementsByClassName("close6")[0];
 
-// When the user clicks the button, open the modal 
-btn6.onclick = function() {
-    modal5.style.display = "none";
-    modal6.style.display = "block";
-    console.log("btn6 test");
-}
+// // When the user clicks the button, open the modal 
+// btn6.onclick = function() {
+//     modal5.style.display = "none";
+//     modal6.style.display = "block";
+//     console.log("btn6 test");
+// }
 
-btn6a.onclick = function() {
-    modal5.style.display = "none";
-    modal4.style.display = "block";
-    console.log("btn6a test");
-}
+// btn6a.onclick = function() {
+//     modal5.style.display = "none";
+//     modal4.style.display = "block";
+//     console.log("btn6a test");
+// }
 
-// When the user clicks on <span> (x), close the modal
-span6.onclick = function() {
-    modal6.style.display = "none";
-}
+// // When the user clicks on <span> (x), close the modal
+// span6.onclick = function() {
+//     modal6.style.display = "none";
+// }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal6) {
-        modal6.style.display = "none";
-    }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal6) {
+//         modal6.style.display = "none";
+//     }
+// }
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ End Tour Destinations Step 4 of 4 Modal @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 //  ##################################### Begin Final Tour Confirmation Modal #####################################
 
-// Get the modal
-var modal7 = document.getElementById('myModal7');
+// // Get the modal
+// var modal7 = document.getElementById('myModal7');
 
-// Get the button that opens the modal
-var btn7 = document.getElementById("create-tour-preview");
-var btn7a = document.getElementById("three-of-four-back-modal");
-var btn8a = document.getElementById("four-of-four-back-modal");
+// // Get the button that opens the modal
+// var btn7 = document.getElementById("create-tour-preview");
+// var btn7a = document.getElementById("three-of-four-back-modal");
+// var btn8a = document.getElementById("four-of-four-back-modal");
 
-// Get the <span> element that closes the modal
-var span7 = document.getElementsByClassName("close7")[0];
+// // Get the <span> element that closes the modal
+// var span7 = document.getElementsByClassName("close7")[0];
 
-// When the user clicks the button, open the modal 
-btn7.onclick = function() {
-    modal6.style.display = "none";
-    modal7.style.display = "block";
-}
+// // When the user clicks the button, open the modal 
+// btn7.onclick = function() {
+//     modal6.style.display = "none";
+//     modal7.style.display = "block";
+// }
 
-btn7a.onclick = function() {
-    modal6.style.display = "none";
-    modal5.style.display = "block";
-}
+// btn7a.onclick = function() {
+//     modal6.style.display = "none";
+//     modal5.style.display = "block";
+// }
 
-btn8a.onclick = function() {
-    modal7.style.display = "none";
-    modal6.style.display = "block";
-}
+// btn8a.onclick = function() {
+//     modal7.style.display = "none";
+//     modal6.style.display = "block";
+// }
 
 
 
-// When the user clicks on <span> (x), close the modal
-span7.onclick = function() {
-    modal7.style.display = "none";
-}
+// // When the user clicks on <span> (x), close the modal
+// span7.onclick = function() {
+//     modal7.style.display = "none";
+// }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal7) {
-        modal7.style.display = "none";
-    }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal7) {
+//         modal7.style.display = "none";
+//     }
+// }
 
 // ##################################### END Final Tour Confirmation Modal #####################################
 
