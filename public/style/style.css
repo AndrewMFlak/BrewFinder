@@ -1004,11 +1004,6 @@ padding: 5px;
     height: 22px;
     cursor: pointer;
     
-    position:relative;
-    top: -37px;
-    right: 95px;
-    float: right;
-
 }
 
 #create-a-tour-p {
@@ -1244,7 +1239,7 @@ padding: 5px;
 /* 
 Styling Modal Form Elements Starts Here */
  
-input#modal3-input1[type=text] {
+input#tourname[type=text] {
     width: 83%;
     padding: 12px 10px;
     margin: 8px 0;
