@@ -641,41 +641,42 @@
         </div>
 
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="assets/js/tours.js"></script> -->
     <script type="text/javascript" src="script/script.js"></script>
     <script>
-        $(function () {
-            // get request for beer tour data to api
-            $.ajax({
-                url: "http://localhost:8080/api/tourInfo",
-                method: "GET"
-            }).then(function (response) {
-                console.log(response);
-                var data = response;
-                var tr;
-                var updateButton = '<button id="update-button">Update</button>';
-                var deleteButton = '<button id="delete-button">Delete</button>';
-                for (var i = 0; i < data.length; i++) {
-                    tr = $('<tr/>');
-                    tr.append("<td>" + data[i].id + "</td>");
-                    tr.append("<td>" + data[i].tourName + "</td>");
-                    tr.append("<td>" + data[i].tourDescription + "</td>");
-                    tr.append("<td>" + data[i].tourInstructions + "</td>");
-                    tr.append("<td>" + updateButton + "</td>");
-                    tr.append("<td>" + deleteButton + "</td>");
-                    $('table').append(tr);
-                }
-            });
-        });
 
-        $("#create-button").on("submit", function (event) {
+        // // get request for beer tour data to api
+        $.ajax({
+            url: "http://localhost:8080/api/tourInfo",
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+            var data = response;
+            var tr;
+            var updateButton = '<button id="update-button">Update</button>';
+            var deleteButton = '<button id="delete-button">Delete</button>';
+            for (var i = 0; i < data.length; i++) {
+                tr = $('<tr/>');
+                tr.append("<td>" + data[i].id + "</td>");
+                tr.append("<td>" + data[i].tourName + "</td>");
+                tr.append("<td>" + data[i].tourDescription + "</td>");
+                tr.append("<td>" + data[i].tourInstructions + "</td>");
+                tr.append("<td>" + updateButton + "</td>");
+                tr.append("<td>" + deleteButton + "</td>");
+                $('table').append(tr);
+            }
+        });
+        $("#create-button").on("click", function (event) {
             // Make sure to preventDefault on a submit event.
             event.preventDefault();
+            console.log("created new tour");
 
             var newTour = {
-                tourName: $("#modal3-input1").val().trim(),
+                tourName: $("#tourName").val().trim(),
                 tourDescription: $("#tourdescription").val().trim(),
-                tourInstructions: $("#tourdescription").val().trim()
+                tourInstructions: $("#tourinstructions").val().trim()
             };
             // Send the POST request.
             $.ajax("/api/tourInfo", {
@@ -683,37 +684,14 @@
                 data: newTour
             }).then(
                 function () {
-                    console.log(this);
-                    console.log("created new tour");
+
+                    console.log(newTour);
                     // Reload the page to get the updated list
                     location.reload();
                 }
             );
         });
 
-        // // update post sent to api and database from front-end interface
-        // $("#update-button").on("click", function (event) {
-        //     var id = $(this).data("id");
-        //     var newSleep = $(this).data("newsleep");
-
-        //     var newSleepState = {
-        //         sleepy: newSleep
-        //     };
-
-        //     // Send the PUT request.
-        //     $.ajax("/api/tourInfo/" + id, {
-        //         type: "PUT",
-        //         data: newSleepState
-        //     }).then(
-        //         function () {
-        //             console.log("changed sleep to", newSleep);
-        //             // Reload the page to get the updated list
-        //             location.reload();
-        //         }
-        //     );
-        // });
-
-        // delete request sent from client to api
         $("#delete-button").on("click", function (event) {
             var id = $(this).data("id");
 
@@ -728,6 +706,7 @@
                 }
             );
         });
+
 
     </script>
 </body>
