@@ -1,0 +1,1613 @@
+/* Style for index.html video */
+#vid, #vid2, #vid3{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    z-index: -1000; 
+    overflow: hidden;
+  }
+
+    #vid3{
+    position: absolute;
+    top: 0%; 
+    left: 0%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    z-index: -1000; 
+    overflow: hidden;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+  } 
+  #vid4{
+    position: absolute;
+    top: 0%; 
+    left: 0%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    z-index: 100; 
+    overflow: hidden;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+  } 
+  
+
+
+/* Adding League Spartan from the leagueofordinarytype.com */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fontface/leaguespartan-bold.eot');
+    src: url('../style/fontface/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         url('../style/fontface/leaguespartan-bold.woff2') format('woff2'),
+         url('../style/fontface/leaguespartan-bold.woff') format('woff'),
+         url('../style/fontface/leaguespartan-bold.ttf') format('truetype'),
+         url('../style/fontface/leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+#h1-ampersand {
+    font-family: 'Fanwood Text', serif;
+    font-style: italic;
+    font-size: 127px;
+    font-weight: bold;
+}
+
+
+#home-h2 {
+    cursor: pointer;
+    color: #F1F1F0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 27px;
+}
+
+
+body {
+    background-color: #53353D;
+}
+
+#title-h1 {
+    padding-top: 220px;
+    color: #F1F1F0;
+    text-align: center; 
+    font-size: 100px;
+    font-family: 'League Spartan';
+    letter-spacing: 4px;
+}
+
+
+header {
+    position: relative;
+    top: -5px;
+    width: 95%;
+    height: 77px;
+    margin: 0 auto;
+    
+}
+
+#nav-container {
+    position: sticky;
+    top:0;
+    background-color: #53353D;
+    width: 101%;
+    z-index: 1;
+}
+
+#about-p, #customer-p, #operator-p, #signin-p, #login-p {
+
+    position: relative;
+    top:23px;
+    margin: 0 auto 0 auto;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 23px;
+    cursor: pointer;
+
+}
+
+#nav-items {
+    position: absolute;
+    top:0;
+    right: 0;
+    
+    
+ display: inline-block;
+}
+
+
+
+#nav-customer-div, #nav-customer-div, #operator-div, #signin-div {
+    display: inline-block;
+    margin-left: 5px;
+    height: 69px;
+    
+}
+
+#about-div, #nav-customer-div, #operator-div, #signin-div, #login-div, #main-modal{
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+ 
+}
+
+#home-div {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+
+
+#signin-div {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #F1F1F0;
+    position: relative;
+    bottom: 0px;
+    height: 66px;
+}
+
+#signin-p {
+    margin-top: -2px;
+}
+
+#home-div {
+    position: relative;
+    top: -12px;
+    left: -15px;
+    
+}
+
+#main-modal {
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    padding: 18px;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+
+ 
+}
+
+#img-modal{
+    width:50px;
+}
+#sosh-modal-div {
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    padding-top: 18px;
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    left: 0px;
+    cursor: pointer;
+ 
+}
+
+#sosh-img-modal {
+    position: relative;
+    top: -6px;
+    width:40px;
+}
+
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+/* 
+nav-href {
+    text-decoration: none;
+    color: #F1F1F0;  
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#title-div {
+
+    height: 650px;
+}
+
+
+  #main-body {
+    background-color: #F1F1F0;
+    width: 101%;
+    margin-left: -8px;
+    height: 550px ;
+}
+
+
+.tagline-h3 {
+    position: relative;
+    top: -25px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 75px;
+    color: #B3B3B3;
+    font-family: 'Fanwood Text', serif;
+    text-align: center;
+    margin: 0 auto;
+}
+
+b{
+    
+    text-align: center;
+    /* font-family: 'Rubik', sans-serif;
+    font-weight: 300; */
+    font-style: italic;
+    font-size: 75px;
+    display: inline-block;
+    color: white;
+}
+
+#intro{
+    position: relative;
+    top: 110px;
+
+}
+
+#intro-p {
+    color: #454444;
+    text-align: center;
+    font-family: 'Fanwood Text', serif;
+    font-size: 57px;
+
+}
+
+#folio-intro-p {
+    margin-top: 15px;
+    color: gray;
+    font-family: 'Fanwood Text', serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+
+
+
+
+/* 
+Modal Begin */
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slide-sosh-up;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slide-sosh-up;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 12px 4px;
+    height: 85px;
+    background-color: #554957;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+
+}
+
+#sosh-modal-h2 {
+    margin-top: 15px;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    height: 225px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 27px;
+    
+
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #554957;
+    color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slide-sosh-up {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slide-sosh-up {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+#sosh-container {
+    
+    width: 95%;
+    margin: 0 auto;
+}
+
+.sosh-icon {
+    
+    cursor: pointer;
+    display: inline-block;
+    
+    width: 8%;
+    margin: 3.35%;
+    padding: 10px;
+
+}
+
+.sosh-img {
+    width: 100%;
+    text-align: center;
+}
+
+.sosh {
+    
+    text-align: center;
+    font-size: 11px;
+    color: #a6a6a6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Side Panel Modal (background) */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content2 {
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 27%;
+    height: 100%;
+    -webkit-animation-name: slide-from-left;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slide-from-left;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close2 {
+    color: #53353D;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.modal-body2 {
+    padding: 2px 16px;
+    
+}
+
+
+
+/* Add Animation */
+@-webkit-keyframes slide-from-left {
+    from {left: -300px; opacity: 0} 
+    to {left: 0; opacity: 1}
+}
+
+@keyframes slide-from-left {
+    from {left: -300px; opacity: 0}
+    to {left: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+
+#main-modal-ul {
+    margin-top: 10px;
+}
+
+.main-modal-links {
+    color: #53353D;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 25px;
+    margin-top: 13px;
+    margin-left:  0px;
+    margin-bottom: 8px;
+
+    cursor: pointer;
+}
+
+#main-modal-h2 {
+    color: #53353D;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+  
+}
+
+
+.close2 {
+    padding-right: 15px;
+}
+
+
+#nj-modal {
+    width: 200px;
+    margin: 60px;
+    position: relative;
+    top: -35px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+#index-customer-button {
+    margin-top: 50px;
+
+    background-color: #A84357;
+    width: 220px;
+    height: 85px;
+    border-radius: 45px;
+    display: inline-block;
+
+    position: absolute;
+    left: 29%;
+
+    cursor: pointer;
+}
+
+#index-host-button {
+    margin-top: 50px;
+
+    background-color: #7A697D;
+    width: 220px;
+    height: 85px;
+    border-radius: 45px;
+    display: inline-block;
+
+    position: absolute;
+    right: 29%;
+    
+    cursor: pointer;
+}
+
+#index-customer-button:hover, #index-host-button:hover  {
+    background-color: ;
+    box-shadow: 1px 1px 6px #999;
+}
+
+.index-button {
+    text-align: center;
+    font-family: 'League Spartan';
+    text-transform: uppercase; 
+    color: white;
+    font-size: 32px;
+    letter-spacing: 2px;
+    position: relative;
+    top: 30px;
+}
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> BEGIN Chris' Create a Tour Modal >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.navigate-modal {
+    width: 100%;
+    color: #4C3736;
+    clear: both;
+}
+.input-modal-h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-top: 7px;
+    color: #4C3736;
+    font-size: 22px;
+}
+
+label {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 100;
+}
+
+
+#create-tour-two-of-four, #create-tour-two-of-four, #create-tour-three-of-four, #create-tour-four-of-four, #create-tour-preview, .addImage{
+    cursor: pointer;
+}
+
+.back-modal, .modal-status, .next-button {
+    margin-top: 10px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    display: inline-block; 
+}
+.back-modal {
+   float: left;
+}
+
+.modal-status {
+  position: relative;
+  left: 37.75%;
+  color: white;
+
+}
+
+.next-button{
+    float: right;
+    
+}
+
+
+#create-button {
+    width: 83%;
+    height: 50px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    background-color: #A1B8C0;
+    color: #3C3B41;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: Heebo, sans-serif;
+    font-size: 32px;
+    font-weight:100;
+    
+}
+
+#create-button:hover {
+    box-shadow: 0px 1.5px 4px #3C3B41;
+}
+
+
+/* Begin Styling back button modals */
+
+
+#one-of-four-back-modal, #two-of-four-back-modal, #three-of-four-back-modal, #four-of-four-back-modal  {
+    cursor: pointer;
+}
+
+#zero-of-four-back-modal {
+    color: white;
+    
+}
+
+/* End Styling back button modals */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END Chris' Create a Tour Modal >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Begin  Progress Bar */
+
+
+.progress-P {
+    font-family: IBM Plex sans, sans-serif;
+    color: #fefefe;
+    text-align: center;
+    padding: 2px;
+}
+
+#operator-step-progress {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0.4px 0.4px 4px grey;
+ 
+  }
+  
+  #step-1-bar {
+    width: 20%;
+    height: 20px;
+    background-color: #A1B8C0;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  #step-2-bar {
+    width: 40%;
+    height: 20px;
+    background-color: #A1B8C0;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  #step-3-bar {
+    width: 60%;
+    height: 20px;
+    background-color: #A1B8C0;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  #step-4-bar {
+    width: 80%;
+    height: 20px;
+    background-color: #A1B8C0;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  #step-5-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #A1B8C0;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+/* End Progress Bar */
+
+
+/* Begin Stylings for Step 1 of 4 */
+.addImage, .tour-start {
+    display: inline-block;
+}
+.addImage {
+    float: left;
+    border-radius: 10px;
+    background-color: lightgrey;
+            height: 205px;
+            width: 205px;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+}
+
+.addImage p {
+    position: relative;
+    top: 50px;
+    margin-bottom: 5px;
+    font-family: Heebo, sans-serif;
+    font-weight: 900;
+    font-size: 55px;
+    padding: 0px;
+    margin: 0px;
+    color: #53353D;
+    
+}
+
+.addImage a {
+    position: relative;
+    top: 80px;
+    font-family: Heebo, sans-serif;
+    color: #53353D;
+}
+
+#addImage-h3 {
+  position: relative;
+  top: 12px;
+}
+
+
+#tourname,
+#specialinstructions {
+    width: 95%;
+    height: 20px;
+}
+
+#tourdescription {
+    width: 95%;
+    height: 65px;
+}
+
+.tour-start{
+   margin-left: 10px;
+}
+
+.address-form{
+    width: 90%;
+    height: 17px;
+    margin-top: 4px;
+    
+}
+
+#address-city {
+    margin-right: 10px;
+    width: 250px;
+}
+
+#address-states {
+    width: 100px;
+}
+
+
+
+#address-1, #address-2{
+    width: 250px;  
+}
+
+.tour-start label {
+
+padding: 5px;
+}
+
+/* #op-zip, #address-zipcodes {
+
+    position: relative;;
+    top: 10px;
+    
+} */
+
+#address-zipcodes {
+    height: 16px;
+}
+
+#specialinstructions {
+    height: 65px;
+}
+
+#label-state{
+    background-color: red;
+}
+/* End Stylings for Step 1 of 4 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================= operator.html ======================================= */
+
+
+#operator-dashboard-panel-header {
+    height: 49px;
+}
+
+#operator-dashboard-div {
+    background-color: white;
+    height: 650px;
+    
+}
+
+#operator-div-2 {
+    display: inline-block;
+    margin-left: 5px;
+    height: 77.5px;
+    border-style: solid;
+    border-color: #DEDEDE;
+    border-width: 0px;    
+    cursor: default;
+}
+
+#operator-div-2 {
+    position: relative;
+    top: -20px;
+    color: white;
+    background-color: #613E47;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    border-radius: 0px 0px 0px 0px;
+
+}
+
+
+#operator-p-2 {
+    position: relative;
+    top:29px;
+    margin: 0 auto 0 auto;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 23px;
+    
+}
+
+#tour-operator-div {
+    background-color: #DDE9ED;
+    width: 20%;
+    height: 100%;
+    box-shadow: 2px 2px 4px #E5E5E5 ;   
+}
+
+#tour-operator-dashboard-h3 {
+    cursor: pointer;
+    color: #3C3B41;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    padding: 8px;
+    padding-top:13px;
+    margin-left: 5px;
+
+    
+}
+
+
+#settings-button-container, #my-tours-button-container, #conversations-button-container {
+    cursor: pointer;
+}
+
+
+#plus-button-container {
+    width: 100%;
+    height: 50px;
+    background-color: #A1B8C0;
+    cursor: pointer;
+  
+}
+
+#plus-icon {
+    height: 21px;
+    cursor: pointer;
+    padding-top: 13.5px;
+    margin-left:-4px;
+    float: left;
+}
+
+#plus-icon-modal {
+    height: 21px;
+    cursor: pointer;
+    padding-top: 13.5px;
+    margin-left: 0px;
+   
+}
+
+#plane-icon {
+    height: 22px;
+    cursor: pointer;
+    
+    position:relative;
+    top: -37px;
+    right: 95px;
+    float: right;
+
+}
+
+#create-a-tour-p {
+    /* color: #3C3B41; */
+    font-family: 'Heebo', sans-serif;
+    font-weight: 100;
+    font-size: 23px;
+    padding: 14px;
+    float: left;
+    
+}
+
+#create-tour-plus-p {
+    font-weight: 300;
+    font-size: 55px;
+
+    
+}
+
+
+#operator-welcome-div {
+    /* background-color: #97746E; */
+    width: 80%;
+    float:right;
+    height: 50px;
+    /* border-bottom-style: solid;
+    border-bottom-color: #DDE9ED;
+    border-bottom-width: 0.1px; */
+    /* box-shadow: 0px 1px 2px #E5E5E5 ; */
+}
+
+#welcome-h2 {
+    color: #3C3B41;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 33px;
+    padding: 14px;
+    float: left;
+    margin-top:5px;
+}
+
+#test-div1 {
+    width: 79%;
+    
+    height: 600px; 
+    float: right;
+    margin-right: -7px;
+    
+}
+
+#test-div2 {
+  
+    width: 94.5%;
+    height: 250px; 
+    margin-left: 20px;
+    
+
+    margin-top:20px;
+    /*background-color:#EBF7FF;  #FFDFD4*/
+
+   
+    
+    border-radius: 10px;
+    /* box-shadow: 0px 3px 8px #E5E5E5 ; */
+}
+
+.test-div {
+    margin-top:20px;
+    background-color: #EBF7FF; /*D9EAFF */
+    width: 30%;
+    margin-left:20px;
+    height: 250px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0px 1.5px 4px #CCCCCC ;
+    vertical-align: top;
+}
+
+#test-a {
+  
+}
+#test-b {
+  
+    
+}
+#test-c {
+
+}
+
+.border-div {
+    position:relative;
+    top: 50px;
+    margin-top: 20px;
+    width:85%;
+    border-top-width: 0.5px;
+    border-top-style: ridge;
+    border-top-color: #B3B3B3;
+    margin: 0 auto; 
+    box-shadow: 0px 1px 1px #F5F5F5;
+
+}
+
+.test-div-h3 {
+    color: #3C3B41;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 14px;
+    float: left;
+    margin-top:5px;
+    
+}
+
+
+/* ::::::::::::: Organizer  Create Tour Button Modal Begins Here :::::::::::::  */
+/* Step 1 of 4 */
+.modal3{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 20px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content3 {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+   
+    padding: 0;
+    border: 1px solid #888;
+    width: 1200px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: create-animation;
+    -webkit-animation-duration: 0.4s;
+    animation-name: create-animation;
+    animation-duration: 0.4s
+
+}
+
+/* Add Animation */
+@-webkit-keyframes create-animation {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes create-animation {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close3 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close3:hover,
+.close3:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header3 {
+    padding: 2px 16px;
+    background-color: #53353D;
+    
+    
+}
+
+#tell-us-h2 {
+    color: white;
+    height: 55px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 17px;
+
+}
+
+.modal-body3 {padding: 2px 16px;}
+
+.modal-footer3 {
+    padding: 2px 16px;
+    background-color: #53353D;
+    color: white;
+    height: 30px;
+}
+
+#disclaimer-h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    color: #B3B3B3;
+    font-size: 14px;
+    padding-top: 8px;
+}
+
+.tourInfo {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 23px;
+    font-weight: 100;
+    font-style: italic;
+    color: #53353D;
+}
+
+.op-field {
+    height: 27px;
+    width: 500px;
+    border-radius: 0px;
+}
+
+.button {
+    background-color: #53353D;
+    height: 60px;
+    width: 160px;
+    cursor: pointer;
+    font-size: 27px;
+    color: #efefef;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+/* 
+Styling Modal Form Elements Starts Here */
+ 
+input#modal3-input1[type=text] {
+    width: 83%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+textarea#tourdescription[type=text] {
+    width: 83%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    height:75px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    
+}
+textarea#specialinstructions[type=text] {
+    width: 83%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    height:75px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+.tour-start {
+    width: 65%;
+   
+}
+input#address-1[type=text], input#address-2[type=text] {
+    width: 80%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    height:32px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    
+}
+input#address-2[type=text], input#address-2[type=text] {
+    width: 80%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    height:32px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    
+}
+
+input#address-city[type=text] {
+    width: 80%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    margin-left:44px;
+    height:32px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+select#address-states {
+    margin-left: 34px;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+}
+
+input#address-zipcodes[type=text]
+{
+    width: 30%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    margin-left:9px;
+    height:32px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+
+}
+input#destinationname[type=text], input#destinationurl[type=url]{   
+    width: 45%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    height:35px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+
+}
+
+textarea#destinationdescription[type=text]{
+    width: 100%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    height:75px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+input.address-zipcodes2[type=text]
+{
+    width: 20%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    margin-left:9px;
+    height:25px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+
+}
+
+#admission-section label{
+    padding: 20px;
+    font-size: 35px;
+    margin-top: 10px;
+    
+}
+input#admission[type=text], input#admission-type[type=text], input#seats-available[type=number]
+{
+    width: 20%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    margin-left:9px;
+    height:45px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 28px;
+    font-family: Heebo, sans-serif;
+    font-weight: 100;
+    
+
+}
+
+#days-section {
+    font-size: 20px;
+    padding-left:200px;
+}
+
+input[type=checkbox] {
+  transform: scale(1.2);
+  
+}
+
+
+
+/* ::::::::::::: Organizer  Create Tour Button Modal Ends Here :::::::::::::  */
+
+
+/* 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@  Begin Table Styles @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+table {
+    font-family: Heebo, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    color: white;
+    font-weight: 300;
+    background-color: #53353D; 
+    font-size: 23px;
+    vertical-align: middle;
+    
+}
+
+tr {
+    
+    font-weight: 100;
+    background-color: #DDE9ED;
+    
+}
+
+td,
+th {
+    
+    border: 0px solid;
+    text-align: left;
+    padding: 8px;
+    
+}
+
+tr:nth-child(even) {
+    background-color: #BED9E3;  /* A1B8C0 ABC3CC */
+}
+
+input {
+    width: 100%;
+}
+
+#update-button, #delete-button {
+    color: #E5E5E5;
+    background-color: #613E47;
+    border-radius: 9px;
+    height: 35px;
+    cursor: pointer;
+}
+#update-button:hover, #delete-button:hover{
+    box-shadow: 1px 1px 2px #3C3B41;
+} 
+
+td:nth-child(2) { width: 12%;}
+td:nth-child(2) { width: 12%;}
+/* 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@  End Table Styles @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* ##################### Begin Search Bar Styles ##################### */
+
+.search-bar {
+    grid-area: input;
+}
+
+.search{
+    grid-area: search;
+}
+
+td:nth-child(5) { vertical-align: middle;}
+td:nth-child(6) { vertical-align: middle;}
+
+
+.search-form {
+    float: right;
+    display: grid;
+    grid-template-areas: 'input input input search';
+    grid-template-columns: auto;
+    padding: 10px;
+    width: 60%;
+   
+
+}
+
+.search-bar {
+    border: 1px solid #e5e5e5;
+    color: #ccc;
+    padding: 15px;
+    text-align: center;
+    grid-gap: 0px;
+}
+
+#search {
+    float:right;
+    width: 50%;
+    border: 1px solid #e5e5e5;
+    color: white;
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+}
+/*
+button:hover {
+    background-color: lightgray;
+}  */
+
+/* .modal-body3 {
+    background: url(../images/red-wine.png) no-repeat center center fixed;  
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} */
+
+.modal-body3 {
+    background: url(../images/red-wine.png) no-repeat;  
+    background-size: cover;
+    background-position: center; 
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^ Begin Media Queries ^^^^^^^^^^^^^^^^^^^^^^^ */
+
+@media screen and (max-width: 1000px) {
+    #plane-icon {
+        display: none;
+       
+   
+        
+       
+    
+    }
+}
+
+@media screen and (max-width: 895px) {
+    #plus-icon {
+        display: none;
+        
+        
+    }
+}
+
+@media screen and (max-width: 859px) {
+    #plus-icon {
+        display: none;
+        
+        
+    }
+}
+
+
+@media screen and (max-width: 859px) {
+    #tour-operator-dashboard-h3, #create-a-tour-p {
+        font-size:14px;
+        
+        
+    }
+}
+
+
+
+
+
+/* 
+^^^^^^^^^^^^^^^^^^^^^^^ End Media Queries ^^^^^^^^^^^^^^^^^^^^^^^ */
+
