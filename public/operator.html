@@ -674,18 +674,18 @@
             console.log("created new tour");
 
             var newTour = {
-                tourName: $("#tourName").val().trim(),
+                tourName: $("#tourname").val().trim(),
                 tourDescription: $("#tourdescription").val().trim(),
-                tourInstructions: $("#tourinstructions").val().trim()
+                tourInstructions: $("#specialinstructions").val().trim(),
             };
+            console.log(newTour);
             // Send the POST request.
             $.ajax("/api/tourInfo", {
                 type: "POST",
-                data: newTour
+                data: newTour,
+                contentType: "application/x-www-form-urlencoded"
             }).then(
                 function () {
-
-                    console.log(newTour);
                     // Reload the page to get the updated list
                     location.reload();
                 }
