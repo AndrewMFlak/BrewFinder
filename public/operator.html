@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project Brew - Express Brewery Tours in the Tristate Area</title>
+    <title>Brew Finder - Host A Brew Tour</title>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/hover.css">
@@ -58,7 +58,7 @@
         </div>
         <div id="home-div">
             <a href="index.html">
-                <h2 id="home-h2">PROJECT BREW</h2>
+                <h2 id="home-h2">BREW FINDER</h2>
             </a>
         </div>
 
@@ -94,9 +94,9 @@
             <table class="effect1">
                 <tr>
                     <th>ID</th>
-                    <th>Tour Name</th>
-                    <th>Tour Description</th>
-                    <th>Tour Instructions</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Instructions</th>
                     <th>
                         <!-- Update Button -->
                     </th>
@@ -182,8 +182,8 @@
             </table>
 
 
-            <div class="page-wrapper">
-                <!-- <a class="btn trigger" href="javascript:;">Click Me!</a> -->
+            <!-- <div class="page-wrapper">
+                <a class="btn trigger" href="javascript:;">Click Me!</a>
             </div>
             <div class="modal-wrapper">
 
@@ -198,7 +198,7 @@
 
                         <section class="general-info">
 
-                            <!-- Information in form will need to be saved in DB and called when page is loaded -->
+                            Information in form will need to be saved in DB and called when page is loaded
 
                             <h3 class="input-modal-h3">Tour Name</h3>
                             <input id="tourname" type="text" name="name" placeholder="ie: West County Brew Tour">
@@ -216,7 +216,7 @@
 
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
 
@@ -229,9 +229,9 @@
 
         <div id="tour-operator-div">
             <div id="operator-dashboard-panel-header">
-                <img src="images/plane.png" id="plane-icon" alt="plus">
+                
                 <h3 id="tour-operator-dashboard-h3">
-                    Tour Operator
+                    Tour Operator 
                 </h3>
             </div>
             <div id="plus-button-container">
@@ -338,7 +338,7 @@
                     <!-- Information in form will need to be saved in DB and called when page is loaded -->
 
                     <h3 class="input-modal-h3">Tour Name</h3>
-                    <input id="modal3-input1" id="tourname" type="text" name="name" placeholder="i.e. West County Brew Tour">
+                    <input id="tourname" type="text" name="name" placeholder="i.e. West County Brew Tour">
                     <br>
 
                     <h3 class="input-modal-h3">Short Description</h3>
@@ -450,7 +450,7 @@
                         <<< Back</p>
                             <p class="modal-status">Step 1 of 4</p>
                             <p class="next-button" id="create-tour-two-of-four">Next >>> </p> -->
-                    <button id="create-button" class="trigger">Create Tour
+                    <button id="create-button" class="trigger">Add Tour
                         <img src="images/plus-icon.png" id="plus-icon-modal" alt="plus"> </button>
 
 
@@ -620,7 +620,7 @@
         <div class="modal-content2">
             <div class="modal-header2">
                 <span class="close2">&times;</span>
-                <h2 id="main-modal-h2">Project Brew</h2>
+                <h2 id="main-modal-h2">Brew Finder</h2>
             </div>
             <div class="modal-body2">
                 <ul id="main-modal-ul">
@@ -642,73 +642,106 @@
 
     </div>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="assets/js/tours.js"></script> -->
     <script type="text/javascript" src="script/script.js"></script>
     <script>
-
-        // // get request for beer tour data to api
-        $.ajax({
-            url: "http://localhost:8080/api/tourInfo",
-            method: "GET"
-        }).then(function (response) {
-            console.log(response);
-            var data = response;
-            var tr;
-            var updateButton = '<button id="update-button">Update</button>';
-            var deleteButton = '<button id="delete-button">Delete</button>';
-            for (var i = 0; i < data.length; i++) {
-                tr = $('<tr/>');
-                tr.append("<td>" + data[i].id + "</td>");
-                tr.append("<td>" + data[i].tourName + "</td>");
-                tr.append("<td>" + data[i].tourDescription + "</td>");
-                tr.append("<td>" + data[i].tourInstructions + "</td>");
-                tr.append("<td>" + updateButton + "</td>");
-                tr.append("<td>" + deleteButton + "</td>");
-                $('table').append(tr);
-            }
-        });
-        $("#create-button").on("click", function (event) {
-            // Make sure to preventDefault on a submit event.
-            event.preventDefault();
-            console.log("created new tour");
-
-            var newTour = {
-                tourName: $("#tourname").val().trim(),
-                tourDescription: $("#tourdescription").val().trim(),
-                tourInstructions: $("#specialinstructions").val().trim(),
-            };
-            console.log(newTour);
-            // Send the POST request.
-            $.ajax("/api/tourInfo", {
-                type: "POST",
-                data: newTour,
-                contentType: "application/x-www-form-urlencoded"
-            }).then(
-                function () {
-                    // Reload the page to get the updated list
-                    location.reload();
+        // $(function () {
+            // $(document).ready(function () {
+            // // get request for beer tour data to api
+            $.ajax({
+                url: "http://localhost:8080/api/tourInfo",
+                method: "GET"
+            }).then(function (response) {
+                // console.log(response);
+                var data = response;
+                var tr;
+                var updateButton = '<button class="update-button">Update</button>';
+                var deleteButton = '<button class="delete-button">Delete</button>';
+                for (var i = 0; i < data.length; i++) {
+                    tr = $('<tr/>');
+                    tr.append("<td class='classID'>" + data[i].id + "</td>");
+                    tr.append("<td>" + data[i].tourName + "</td>");
+                    tr.append("<td>" + data[i].tourDescription + "</td>");
+                    tr.append("<td>" + data[i].tourInstructions + "</td>");
+                    tr.append("<td>" + updateButton + "</td>");
+                    tr.append("<td>" + deleteButton + "</td>");
+                    $('table').append(tr);
                 }
-            );
-        });
+            });
 
-        $("#delete-button").on("click", function (event) {
-            var id = $(this).data("id");
+            $("#create-button").on("click", function (event) {
+                console.log("created new tour");
+                //     event.preventDefault();
 
-            // Send the DELETE request.
-            $.ajax("/api/tourInfo/" + id, {
-                type: "DELETE"
-            }).then(
-                function () {
-                    console.log("deleted tour", id);
-                    // Reload the page to get the updated list
-                    location.reload();
-                }
-            );
-        });
+                var newTour = {
+                    tourName: $("#tourname").val().trim(),
+                    tourDescription: $("#tourdescription").val().trim(),
+                    tourInstructions: $("#specialinstructions").val().trim(),
+                };
+
+                console.log(newTour);
 
 
+                // Send the POST request.
+                $.ajax("/api/newTour", {
+                    type: "POST",
+                    data: newTour,
+                    contentType: "application/x-www-form-urlencoded",
+                    success: function () {
+                        location.reload();
+                    }
+                    // }).then(
+                    //     function (post) {
+                    //         console.log(post);
+                    //         // Reload the page to get the updated list
+                    //         location.reload();
+                });
+            });
+
+            // $(this, '.update-button').on("click", function (event) {
+
+            //     console.log('this update');
+            //     // Open this modal //
+            //     $(btn3).on('click', function () {
+            //         modal3.style.display = "block";
+            //     }
+
+            //     $.ajax("/api/newTour", {
+            //             type: "PUT",
+            //             data: newTour,
+            //             contentType: "application/x-www-form-urlencoded",
+            //         }).then(
+            //             function (post) {
+            //                 console.log(post);
+            //                 // Reload the page to get the updated list
+            //                 location.reload();
+            //                 console.log('reload');
+                        
+            //     });
+            // });
+
+
+
+// <!-- 
+//             $(this, ".delete-button").on("click", function (event) {
+//                 // $(this).closest('<td class="classID">').remove();
+//                 var id = $(this).data(".classID");
+
+//                 $.ajax("/api/tourInfo/" + id, {
+//                     type: "DELETE"
+//                 }).then(
+//                     function () {
+//                         console.log("deleted cat", id);
+//                         // Reload the page to get the updated list
+//                         location.reload();
+//                     } -->
+                // );
+            // });
+        // });
     </script>
+
 </body>
 
 </html>
