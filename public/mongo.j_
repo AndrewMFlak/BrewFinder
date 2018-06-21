@@ -1,0 +1,56 @@
+
+
+var schema = new Schema(
+    {
+        name: String, // Tour Name
+        short_description: { type: String, max: 300 }, // Tour Description
+        special_instructions: { type: String, max: 300 }, // Tour Special Instructions
+        value_prop: [], // What is included in the tour?
+        admission:
+            {
+                amount: { type: Number, max: 999999 },
+                admission_type: { type: String, max: 30 },
+            },
+        tour_stops:
+            {
+                tour_stop_1:
+                    {
+                        name: { type: String, max: 50 },
+                        location: { type: String, max: 50 },
+                        address: { type: String, max: 50 },
+                    },
+                tour_stop_2:
+                    {
+                        name: { type: String, max: 50 },
+                        location: { type: String, max: 50 },
+                        address: { type: String, max: 50 },
+                    },
+            },
+        time_slots:
+            {
+                time_slot_1:
+                    {
+                        day: { type: String, max: 50 },
+                        time: { type: String, max: 50 },
+                        duration: { type: Number },
+
+                    },
+                time_slot_2:
+                    {
+                        day: { type: String, max: 50 },
+                        time: { type: String, max: 50 },
+                        duration: { type: Number },
+                    },
+
+            },
+
+        // binary: Buffer,
+        // living: Boolean,
+        // updated: { type: Date, default: Date.now },
+        // age: { type: Number, min: 18, max: 65, required: true },
+        // mixed: Schema.Types.Mixed,
+        // _someId: Schema.Types.ObjectId,
+        // array: [],
+        // ofString: [String], // You can also have an array of each of the other types too.
+        // nested: { stuff: { type: String, lowercase: true, trim: true } }
+    })

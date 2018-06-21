@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+    <title>Brew Finder | Tour Operator</title>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        * {
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        article {
+            min-height: 100%;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 100%;
+        }
+
+        nav {
+            display: grid;
+            /* grid-template-columns define the number of columns */
+            /* There are currently 6 columns in this grid */
+            grid-template-columns: auto auto auto auto auto auto;
+
+            /* grid-template-rows defines the number of rows and the height of each row*/
+            /* There are currently 2 rows */
+            grid-template-rows: 60px;
+            grid-gap: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        dashboard {
+            display: grid;
+            /* grid-template-columns define the number of columns */
+            /* There are currently 6 columns in this grid */
+            grid-template-columns: auto auto auto auto auto auto;
+
+            /* grid-template-rows defines the number of rows and the height of each row*/
+            /* There are currently 2 rows */
+            grid-template-rows: 30px;
+            grid-gap: 10px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .main-content {
+            display: grid;
+            /* grid-template-columns define the number of columns */
+            /* There are currently 6 columns in this grid */
+            grid-template-columns: auto;
+
+            /* grid-template-rows defines the number of rows and the height of each row*/
+            /* There are currently 2 rows */
+            grid-template-rows: 200px;
+            grid-gap: 10px;
+            margin-top: 0;
+            border: 1px solid red;
+        }
+
+        footer {
+            display: grid;
+            /* grid-template-columns define the number of columns */
+            /* There are currently 6 columns in this grid */
+            grid-template-columns: auto auto auto auto auto auto;
+            /* grid-template-rows defines the number of rows and the height of each row*/
+            /* There are currently 2 rows */
+            grid-template-rows: 60px;
+            grid-gap: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .one {
+            grid-column: 1;
+        }
+
+        .two {
+            grid-column: 2;
+        }
+
+        .three {
+            grid-column: 3;
+        }
+
+        .four {
+            grid-column: 4;
+        }
+
+        .five {
+            grid-column: 5;
+        }
+
+        .six {
+            grid-column: 6;
+        }
+
+        #background-image {
+
+            /* background-image: url("https://www.transparenttextures.com/patterns/food.png"); */
+            /* background-image:linear-gradient(to right, rgba(236, 114, 245, 1), rgba(191, 60, 182, .8), rgba(82, 103, 151, .4), rgba(62, 104, 170, .4), rgba(67, 210, 199, 1)), 
+        url('assets/images/beer.jpg'); */
+            /* background-image:linear-gradient(to right, rgba(5, 25, 55, .1), rgba(0, 77, 122, .1), rgba(0, 135, 147, .4), rgba(0, 191, 114, .4), rgba(168, 235, 18, 1)),  
+            url('assets/images/beer.jpg');*/
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+
+            font-size: 120px;
+            /* font-family: aileron; */
+            /* font-family: 'Carter One', cursive; */
+            color: #E5E5E5;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        /* ///////////////////// TABLE CSS //////////////////////// */
+
+        table {
+            font-family: Heebo, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            color: white;
+            font-weight: 300;
+            /* background-color: rgba(240, 12, 126, 1); */
+            background-color: gray;
+            opacity: 0.8;
+            font-size: 12px;
+            vertical-align: middle;
+            width: auto;
+        }
+
+        tr {
+
+            font-weight: 100;
+            background-color: #DDE9ED;
+        }
+
+        td,
+        th {
+
+            border: 0px solid;
+            text-align: left;
+            padding: 8px;
+        }
+
+        td {
+            font-size: 12px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #BED9E3;
+            /* A1B8C0 ABC3CC */
+        }
+
+        .last-col {
+            width: 16%;
+        }
+
+        button:hover {
+            background-color: darkgray;
+        }
+
+        /* //////////////////// MODAL ////////////////////// */
+
+        .blur {
+            -webkit-filter: blur(5px);
+            -moz-filter: blur(5px);
+            -o-filter: blur(5px);
+            -ms-filter: blur(5px);
+            filter: blur(5px);
+        }
+
+        a.btn {
+            width: 150px;
+            display: block;
+            margin: -25px 0 0 -75px;
+            padding: 1em 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font: 1.125em 'Arial', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+            background: rgba(217, 67, 86, 1);
+        }
+
+        .modal-wrapper {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(255, 257, 153, 0.75);
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .modal-wrapper.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            width: 600px;
+            height: auto;
+            display: block;
+            margin: 50% 0 0 -300px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            background: #fff;
+            opacity: 0;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .modal-wrapper.open .modal {
+            margin-top: -200px;
+            opacity: 1;
+        }
+
+        .head {
+            width: 90%;
+            height: 16px;
+            padding: 1.5em 5%;
+            overflow: hidden;
+            background: #01bce5;
+        }
+
+        .btn-close {
+            width: 32px;
+            height: 32px;
+            display: block;
+            float: right;
+        }
+
+        .btn-close::before,
+        .btn-close::after {
+            content: '';
+            width: 32px;
+            height: 6px;
+            display: block;
+            background: #fff;
+        }
+
+        .btn-close::before {
+            margin-top: 12px;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .btn-close::after {
+            margin-top: -6px;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body id="background-image">
+    <article id="background-image">
+        <!-- Navbar -->
+        <nav>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </nav>
+
+        <!-- Dashboard -->
+        <dashboard>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div><button>Create A New Tour</button></div>
+        </dashboard>
+
+        <!-- Main Contet -->
+        <section class="main-content">
+            <!-- <button id="create-button" class="trigger">+ Create Tour</button> -->
+            <div>
+                <ul>
+                    <li>1. Select Your Tour</li>
+                    <li>2. Select Your Time</li>
+                    <li>3. Select Your Admission</li>
+                    <li>4. Checkout</li>
+                </ul>
+                <!-- <form>
+                    <p>Tour Name:
+                        <input name="tour_name">
+                    </p>
+                    <p>About This Tour:
+                        <input name="about_tour">
+                    </p>
+                    <input type="submit" name="submit" placeholder="Submit">
+                </form> -->
+            </div>
+
+            <table class="tourInfo">
+                <tr>
+                    <th>ID</th>
+                    <th>Tour Name</th>
+                    <th>About This Tour</th>
+                    <th></th>
+                </tr>
+                <tbody>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                    <!-- <p>Instructions</p>
+                <p>Included In This Tour: (Examples)</p>
+                <ul>
+
+                    <li>Enjoy 13-16 beer samples (trust us, we provide plenty)</li>
+                    <li>VIP acess at 4 brewery stops</li>
+                    <li>Lunch & beer pairing</li>
+                    <li>Roundtrip transportation</li>
+                </ul> -->
+
+                </tbody>
+            </table>
+
+            <table class="yourTour">
+                <tr>
+                    <th>Tour Stop Name</th>
+                    <th>Tour Stop Address</th>
+                    <th class="last-col">
+                        <button id="add-tour-stop-button">+ Add Tour Stop</button>
+                    </th>
+                </tr>
+
+                <tbody>
+                    <tr>
+                        <td>Jersey Girl Brewing</td>
+                        <td>
+                            <a href="#" target="_blank">426 Sand Shore Rd, Hackettstown, NJ 07840</a>
+                        </td>
+                        <td>
+                            <button id="update-button">Update</button>
+                            <button id="delete-button">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>Manskirt Brewing</td>
+                        <td>
+                            <a href="#" target="_blank">144 Main St, Hackettstown, NJ, 07840</a>
+                        </td>
+                        <td>
+                            <button id="update-button">Update</button>
+                            <button id="delete-button">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>Prontos Pizzeria & Restaurant</td>
+                        <td>
+                            <a href="#" target="_blank">1956 NJ-57, Hackettstown, NJ 07840</a>
+                        </td>
+                        <td>
+                            <button id="update-button">Update</button>
+                            <button id="delete-button">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>Czig Meister Brewing</td>
+                        <td>
+                            <a href="#" target="_blank">106 Valentine St, Hackettstown, NJ 07840</a>
+                        </td>
+                        <td>
+                            <button id="update-button">Update</button>
+                            <button id="delete-button">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <!-- <table class="timeSlots">
+                <tr>
+                    <th>Day</th>
+                    <th>Start Time</th>
+                    <th>Duration</th>
+                    <th>Pick Up Location</th>
+                    <th>Pick Up Address</th>
+                    <th>Available Seats</th>
+                    <th>
+                       
+                    </th>
+                    <th class="last-col">
+                        <button id="add-time-slot-button">+ Add Time Slot</button>
+                        
+                    </th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>9:00 AM</td>
+
+                        <td>90 Minutes</td>
+                        <td>Simon Mall (Near Sears)</td>
+                        <td>301 Mt Hope Ave, Rockaway, NJ 07866</td>
+                        <td>10 / 30</td>
+                        <td></td>
+                        <td>
+                            <button id="update-button">Update</button>
+                            <button id="delete-button">Delete</button>
+                        </td>
+                    </tr> -->
+
+            <!-- <tr>
+                        <td>Tuesday</td>
+                        <td>1:00 PM</td>
+                        <td>90 Minutes</td>
+                        <td>Walgreens</td>
+                        <td>22 W Main St, Denville, NJ 07834</td>
+                        <td>15 / 30</td>
+                        <td></td>
+                        <td>
+                            <button id="update-button">Update</button>
+                            <button id="delete-button">Delete</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <br>
+
+            <table class="admission">
+                <tr>
+                    <th>Admission Type</th>
+                    <th>Admission</th>
+
+                    <th class="last-col">
+                        <button>+ Add Admission</button> -->
+
+            <!-- </th>
+                </tr>
+
+                <tbody>
+                    <tr>
+                        <td>General (21+ years old)</td>
+                        <td>$30 per person</td>
+                        <td>
+                            <button id="update-button">Update</button>
+                            <button id="delete-button">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Senior (55+ years old)</td>
+                        <td>$20 per person</td>
+                        <td>
+                            <button id="update-button">Update</button>
+                            <button id="delete-button">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Non Drinker</td>
+                        <td>$10 per person</td>
+                        <td>
+                            <button id="update-button">Update</button>
+                            <button id="delete-button">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> -->
+
+
+            <!-- <p>Google Maps API
+                <br> Show the Locations of the Tour Stops when purchasing and in the confirmation email.</p>
+            <p>Rules
+                <br> 1. NO pregaming. Anyone visibly intoxicated before the tour will not be allowed to attend.
+                <br> 2. For US citizens please bring a non-expired state ID. If you are not from the states, please bring your
+                passport.
+                <br> 3. Wear closed Toe Shoes (for safety reasons)</p>
+            <p>Cancellation Policy</p>
+            <p>Terms and Conditions</p>
+            <br>
+            <br>
+            <p>Future Dev</p>
+            <p>Promos</p>
+            <p>Date Exclusions (Holidays, Manually turn a day off)</p> -->
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </footer>
+    </article>
+
+    <div class="modal-wrapper">
+        <div class="modal">
+            <div class="head">
+                <a class="btn-close trigger"></a>
+            </div>
+            <!-- <div class="content"> -->
+
+            <!-- <section class="general-info"> -->
+            <table class="yourTour">
+                <tr>
+                    <th>Tour Stop Name</th>
+                    <th>Tour Stop Address</th>
+                    <th class="last-col">
+                    </th>
+                </tr>
+
+                <tbody>
+                    <tr>
+
+                        <td>
+                            <input name="tour_stop_name">
+                        </td>
+                        <td>
+                            <input name="tour_stop_address">
+                        </td>
+                        <td>
+                            <button class="apply-button">Apply</button>
+                            <button class="cancel-button">Cancel</button>
+                        </td>
+                    </tr>
+                    <!-- </section> -->
+
+                    <!-- </div> -->
+        </div>
+    </div>
+
+
+
+    <!-- //////////////// MODAL SCRIPT /////////////// -->
+    <script>
+        $(document).ready(function () {
+            $('.trigger').click(function () {
+                $('.modal-wrapper').toggleClass('open');
+                $('.page-wrapper').toggleClass('blur');
+                return false;
+            });
+
+            $('#add-tour-stop-button').click(function () {
+                $('.modal-wrapper').toggleClass('open');
+                return false;
+            });
+
+            // $('#add-time-slot-button').click(function () {
+            //     $('.modal-wrapper').toggleClass('open');
+            //     return false;
+            // });
+
+        });
+    </script>
+</body>
+
+</html>

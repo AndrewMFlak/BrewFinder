@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+
+    <title>Brew Finder | Sign Up and Host A Tour</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
+
+    <style>
+        .one {
+            grid-column: 1;
+        }
+
+        .two {
+            grid-column: 2;
+        }
+
+        .three {
+            grid-column: 3;
+        }
+
+        .four {
+            grid-column: 4;
+        }
+
+        .five {
+            grid-column: 5;
+        }
+
+        .six {
+            grid-column: 6;
+        }
+
+        * {
+            /* border: 1px solid red; */
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #background-image {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 135, 147, 0), rgba(0, 191, 114, 0), rgba(168, 235, 18, 0)), url('assets/images/brewery-4.jpg');
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        article {
+            min-height: 100%;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 100%;
+        }
+
+        nav {
+            display: grid;
+            color: white;
+
+            /* grid-template-columns define the number of columns */
+            /* There are currently 6 columns in this grid */
+            grid-template-columns: auto auto auto auto auto auto;
+
+            /* grid-template-rows defines the number of rows and the height of each row*/
+            /* There are currently 2 rows */
+            grid-template-rows: 60px;
+            text-align: center;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 400px;
+            text-align: center;
+            margin-top: 50px;
+            /* border: 1px solid green; */
+        }
+
+        div.content-left {
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: left;
+            padding-left: 30px;
+            padding-right: 20px;
+        }
+
+        div.content-right {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .sign-up-form {
+            height: 100%;
+            margin-right: 30px;
+            margin-left: 20px;
+            background-color: white;
+            opacity: 0.8;
+            border: 1px solid white;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-rows: 60px;
+            grid-gap: 10px;
+            padding: 10px;
+            text-align: center;
+            /* border: 1px solid purple; */
+        }
+
+        /* Global */
+
+        h2 {
+            font-size: 34px;
+            font-weight: bold;
+            color: #e5e5e5;
+            text-align: center;
+        }
+
+        a {
+            color: rgba(240, 12, 126, 0.9);
+        }
+
+        /* Left Side */
+
+        .content-left h2 {
+            text-align: left;
+        }
+
+        p.learn-more {
+            /* Learn More */
+            font-size: 16px;
+        }
+
+        p.call-out {
+            font-size: 24px;
+        }
+
+        /* Right Side */
+
+        .sign-up {
+            /* Input and Submit Button */
+            width: 80%;
+            margin: auto;
+            /* border: 1px solid red; */
+        }
+
+        .sign-up-form h2 {
+            color: black;
+        }
+
+        .sign-up-form p {
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 30px;
+        }
+
+        ::placeholder {
+            font-size: 14px;
+            text-align: center;
+            /* padding: 10px; */
+        }
+
+        .submit-button {
+            color: white;
+            background-color: rgba(240, 12, 126, 0.9);
+            font-size: 18px;
+            width: 100%;
+            height: 50px;
+            margin-top: 30px;
+        }
+
+        .submit-button:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body id="background-image">
+    <article id="background-image">
+        <!-- Navbar -->
+        <nav>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </nav>
+
+        <!-- Written Content -->
+        <section class="main-content">
+
+            <!-- Call Out Messaging -->
+            <div class="content-left">
+                <h2>Host Your Tour on
+                    <i>BrewFinder</i>.</h2>
+                <p class="call-out">Expose your brand to millions of customers.</p>
+                <p class="learn-more">Why businesses choose BrewFinder
+                    <a href="#">Learn More</a>
+                </p>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div class="content-right">
+                <div class="sign-up-form">
+                    <h2>Sign Up Form</h2>
+
+                    <form class="sign-up">
+                        <div id="alert" class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <!-- <span class="sr-only">Error:</span> -->
+                            <!-- <span class="msg"></span> -->
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="exampleInputEmail1">Email address</label> -->
+                            <input type="email" class="form-control" id="email-input" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="exampleInputPassword1">Password</label> -->
+                            <input type="password" class="form-control" id="password-input" placeholder="Password">
+                        </div>
+                        <button type="submit" class="submit-button">Sign Up</button>
+                        <br>
+                        <p>Already a customer? Login
+                            <a href="/login">here</a>.
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </footer>
+    </article>
+</body>
+
+</html>
