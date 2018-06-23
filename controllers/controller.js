@@ -9,12 +9,12 @@ module.exports = function (app) {
         // tourInfo.all(function(data) {
         //     console.log(res);
         // })
-        res.sendFile(path.join(__dirname, "index.html"));
+        res.sendFile(path.join(__dirname, "../public/index-grid.html"));
     });
 
 
     app.get("/operator", function (req, res) {
-        res.sendFile(path.join(__dirname, "operator.html"));
+        res.sendFile(path.join(__dirname, "../public/operator-grid.html"));
     });
 
 

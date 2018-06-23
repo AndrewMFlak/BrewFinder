@@ -9,8 +9,6 @@
 
     <title>Brew Finder | Sign Up and Host A Tour</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/util.js"></script>
-    <script type="text/javascript" src="js/signup.js"></script>
 
     <style>
         .one {
@@ -292,8 +290,8 @@
                 </div>
 
                 <div class="content-right">
-                    <div class="sign-up-form">
-
+                    <div class="sign-up-form ">
+<!-- 
                         <div id="head_container_login">
                             <div class="container" id="log-in-user">
                                 <div class="row">
@@ -303,30 +301,55 @@
                                             <div class="card-header">
                                             </div>
                                             <div class="card-body sign-up">
-                                                    <br>
-                                                <h2 class="card-title">Login</h2>
-                                                <p class="card-text">
-                                                    <input id="emailBox" type="email" placeholder="Email">
-                                                    <br>
-                                                    <input id="passwordBox" type="password" placeholder="Password">
+                                                <br> -->
+
+                                                <form class="login">
+                                                        <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                                                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                                            <span class="sr-only">Error:</span> <span class="msg"></span>
+                                                          </div>
+                                                      <div class="form-group">
+                                                        <label for="exampleInputEmail1">Email address</label>
+                                                        <input type="email" class="form-control" id="email-input" placeholder="Email">
+                                                      </div>
+                                                      <div class="form-group">
+                                                        <label for="exampleInputPassword1">Password</label>
+                                                        <input type="password" class="form-control" id="password-input" placeholder="Password">
+                                                      </div>
+                                                      <button type="submit" class="btn btn-default submit-button">Login</button>
+                                                    </form>
                                                     
-                                                </p>
-                                                
-                                                <!-- <a class="btn btn-dark" id="btnLogin">Log In</a> -->
-                                                <button type="button" id="btnLogin" class="button submit-button">Log In</button>
-                                                <!-- <button type="button" id="btnRedirect" class="btn btn-secondary">(patient.html)</button> -->
+                                                <!-- <form class="login">
+                                                    <h2 class="card-title">Login</h2>
+                                                    <p class="card-text">
+                                                        <input id="emailBox" type="email" placeholder="Email">
+                                                        <br>
+                                                        <input id="passwordBox" type="password" placeholder="Password">
+
+                                                    </p>
+
+                                                    <!-- <a class="btn btn-dark" id="btnLogin">Log In</a> -->
+                                                    <!-- <button type="button" id="btnLogin" class="button submit-button">Log In</button> -->
+                                                    <!-- <button type="button" id="btnRedirect" class="btn btn-secondary">(patient.html)</button> -->
+                                                <!-- </form> -->
+
+
+
+
 
                                                 <br>
                                                 <p>Don't have an account? Create one
                                                     <a href="/signup">here</a>.
                                                 </p>
-                                            </div>
+
+                                            <!-- </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
+
             </section>
             <!-- Footer -->
             <footer>
@@ -337,6 +360,8 @@
                 <div>5</div>
                 <div>6</div>
             </footer>
+            <script type="text/javascript" src="assets/js/util.js"></script>
+            <script type="text/javascript" src="assets/js/signup.js"></script>
     </body>
 
 </html>
